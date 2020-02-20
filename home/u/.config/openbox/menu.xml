@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu 
+	xmlns="http://openbox.org/" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd"
+>
+	<menu
+		id="root-menu"
+		label="Main Menu"
+	>
+		<!-- *** RUN APPLICATIONS *** -->
+		<separator label="Run Applications" />
+		<item label="Firefox: Browse the internet" icon="/usr/share/icons/Obsidian/apps/96/firefox.svg">
+			<action name="Execute">
+				<command>firefox</command>
+			</action>
+		</item>
+		<item label="Thunar: Browse files on the computer" icon="/usr/share/icons/Obsidian-Sand/places/96/folder-home.svg">
+			<action name="Execute">
+				<command>thunar ~/</command>
+			</action>
+		</item>
+		<item label='Shotwell: Manage your "Pictures" folder' icon="/usr/share/icons/Obsidian/apps/96/shotwell.svg">
+			<action name="Execute">
+				<command>shotwell</command>
+			</action>
+		</item>
+		<item label="Libre Office: Write word documents, etc" icon="/usr/share/icons/Obsidian/apps/96/libreoffice.svg">
+			<action name="Execute">
+				<command>libreoffice</command>
+			</action>
+		</item>
+		<item label="Parole: Play music, videos, DVDs, etc" icon="/usr/share/icons/Obsidian/apps/96/parole.svg">
+			<action name="Execute">
+				<command>parole</command>
+			</action>
+		</item>
+		<item label="Skype" icon="/usr/share/icons/Obsidian/apps/96/skype.svg">
+			<action name="Execute">
+				<command>skype</command>
+			</action>
+		</item>
+		<item label="Calculator" icon="/usr/share/icons/Obsidian/apps/96/galculator.svg">
+			<action name="Execute">
+				<command>galculator</command>
+			</action>
+		</item>
+		<item label="Take a screen-shot" icon="/usr/share/icons/Obsidian/apps/96/applets-screenshooter.svg">
+			<action name="Execute">
+				<command>xfce4-screenshooter</command>
+			</action>
+		</item>
+		<item label="XF-Burn: Burn CDs &amp; DVDs" icon="/usr/share/icons/Obsidian/apps/96/xfburn.svg">
+			<action name="Execute">
+				<command>xfburn</command>
+			</action>
+		</item>
+		<item label="Simple Scan: Scan documents" icon="/usr/share/icons/Obsidian/devices/scalable/scanner.svg">
+			<action name="Execute">
+				<command>simple-scan</command>
+			</action>
+		</item>
+		<!-- *** EXIT *** -->
+		<separator label="Exit" />
+		<item label="Shut down computer" icon="/usr/share/icons/Obsidian/apps/96/xfsm-shutdown.svg">
+			<action name="Execute">
+				<command>systemctl poweroff</command>
+				<prompt>
+					Are you ready to shut down? Click "No" if you still have files open or applications running. Otherwise, click "Yes".
+				</prompt>
+			</action>
+		</item>
+		<item label="Restart computer" icon="/usr/share/icons/Obsidian/apps/96/xfsm-reboot.svg">
+			<action name="Execute">
+				<command>systemctl reboot</command>
+				<prompt>
+					Are you ready to reboot? Click "No" if you still have files open or applications running. Otherwise, click "Yes".
+				</prompt>
+			</action>
+		</item>
+		<item label="Log out without shutting down" icon="/usr/share/icons/Obsidian/apps/96/xfsm-logout.svg">
+			<action name="Execute">
+				<command>openbox --exit</command>
+				<prompt>
+					Are you ready to log out? Click "No" if you still have files open or applications running. Otherwise, click "Yes".
+				</prompt>
+			</action>
+		</item>
+		<item label="Lock the session" icon="/usr/share/icons/Obsidian/apps/96/gnome-lockscreen.svg">
+			<action name="Execute">
+				<command>dm-tool lock</command>
+				<prompt>
+					Would you like to lock the session? Your applications will stay open and running, but you will need your password to get back in.
+				</prompt>
+			</action>
+		</item>
+		<!-- *** HELP *** -->
+		<separator label="Help" />
+		<item label="Conky: Show info about computer">
+			<action name="ToggleShowDesktop" />
+		</item>
+		<!-- *** SETTINGS *** -->
+		<separator label="Change Settings" />
+		<menu id="settings" label="Be careful messing around in here" icon="/usr/share/icons/Obsidian/categories/96/xfce4-settings.svg">
+			<item label="XFCE4 Settings manager">
+				<action name="Execute">
+					<command>xfce4-settings-manager</command>
+				</action>
+			</item>
+			<item label="XFCE4 Settings editor">
+				<action name="Execute">
+					<command>xfce4-settings-editor</command>
+				</action>
+			</item>
+			<item label="System-config-printer">
+				<action name="Execute">
+					<command>system-config-printer</command>
+				</action>
+			</item>
+			<item label="PAVU Control: Sound mixer">
+				<action name="Execute">
+					<command>pavucontrol</command>
+				</action>
+			</item>
+			<item label="XFCE4 Display settings">
+				<action name="Execute">
+					<command>xfce4-display-settings</command>
+				</action>
+			</item>
+			<item label="XFCE4 Power manager">
+				<action name="Execute">
+					<command>xfce4-power-manager-settings</command>
+				</action>
+			</item>
+			<item label="XFCE4 Screen saver">
+				<action name="Execute">
+					<command>xfce4-screensaver-preferences</command>
+				</action>
+			</item>
+			<item label="XFCE4 notifyD config">
+				<action name="Execute">
+					<command>xfce4-notifyd-config</command>
+				</action>
+			</item>
+			<item label="XFCE4 Mime settings">
+				<action name="Execute">
+					<command>xfce4-mime-settings</command>
+				</action>
+			</item>
+			<item label="Blue Man Manager: Bluetooth">
+				<action name="Execute">
+					<command>blueman-manager</command>
+				</action>
+			</item>
+			<item label="LightDM GTK greeter settings">
+				<action name="Execute">
+					<command>lightdm-gtk-greeter-settings-pkexec</command>
+				</action>
+			</item>
+			<separator />
+			<item label="LX-Appearance: Theming">
+				<action name="Execute">
+					<command>lxappearance</command>
+				</action>
+			</item>
+			<item label="OB-Conf: Window manager">
+				<action name="Execute">
+					<command>obconf</command>
+				</action>
+			</item>
+			<item label="Tint2-Conf: Panel settings">
+				<action name="Execute">
+					<command>tint2conf</command>
+				</action>
+			</item>
+			<separator />
+			<item label="XFCE4 Terminal">
+				<action name="Execute">
+					<command>xfce4-terminal</command>
+				</action>
+			</item>
+			<item label="Mousepad: Edit text files">
+				<action name="Execute">
+					<command>mousepad</command>
+				</action>
+			</item>
+			<item label="Onboard: Virtual keyboard">
+				<action name="Execute">
+					<command>onboard</command>
+				</action>
+			</item>
+			<item label="XFCE4 Task Manager">
+				<action name="Execute">
+					<command>xfce4-taskmanager</command>
+				</action>
+			</item>
+		</menu>
+
+	</menu>
+</openbox_menu>

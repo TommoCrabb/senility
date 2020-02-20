@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+start-pulseaudio-x11 & # Enable sound server if not already running
+xdg-user-dirs-update & # Supposedly helps with keeping user directories in order
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & # Gives user permission to change LightDM options
+xset dpms off & # Turn off X11 built in power manager
+xset s off & # Turn of X11 screen saver
+xfce4-power-manager & # Turn on xfce4 power manager
+xfce4-screensaver & # Required for xfce4-power-manager to turn off screen
+spice-vdagent & # Only when running as a VM inside a QEMU 
+sleep 2 
+xsetroot -solid "#FFFFFF" # Set desktop background to white
+conky & # Computer info on desktop
+tint2 & # Desktop panel
+sleep 2 
+pnmixer & # Volume applet for system tray
+nm-applet & # Networking applet for system tray
+system-config-printer-applet & # Printer applet for system tray
+update-notifier & # Install updates
+xfce4-terminal --maximize & # Comment out after finished setup

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Main Menu
+Exec=/opt/mainmenu.sh
+Icon=/opt/mainmenu.svg
+Type=Application
+Categories=Custom;
